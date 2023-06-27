@@ -1,13 +1,16 @@
 // code your solution here
-const saturdayFun = function(defaultActivity = 'roller-skate'){
-    return "This Saturday, I want to roller-skate!";
+
+const saturdayFun = function(dActivity = 'roller-skate'){
+    return `This Saturday, I want to ${dActivity}!`;
 };
 
-saturdayFun("Bathe my dog");
-const mondayWork = function(x = 'go to the office.'){ 
-    return 'This Monday, I will ' + x;
+function mondayWork(work ="go to the office"){ 
+    return `This Monday, I will ${work}.`;
 }
-function wrapAdjective(){
-    return "You are *a hard worker*!";
+function wrapAdjective(wrap = '*'){
+    function wrapped(text){
+        return `You are ${wrap}${text}${wrap}!`;
+    }
+    return wrapped;
 }
 
